@@ -1,0 +1,19 @@
+{
+  "name": "tax-calci",
+  "version": "1.0.0",
+  "description": "My Tax calculator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Dharwin1422"
+  },
+  "author": "dharwin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "s": "^1.0.0"
+  }
+}

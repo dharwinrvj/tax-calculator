@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAACINEFF6AQxRnfkETZ3xAEmd7PxJnez4RZ3s+EWd6PhBnez4RZ31AEmd/QRNnfEYVXjpSJAwAAAAAAAAAACMXAiLBbTT/x3pF/7xpMv/CdkH/umkz/79yPf+7azX/vnA7/75vOf++bjj/wnQ+/7dmMf9cYTpBAAAAAAAAAAAkGAQk8LOG/////////+b/////////9/////////////////////////////////+0Yiz/YmhDQgAAAAAAAAAAIRYCJNeQX///////9LyU///////3xJ7////////fv/////z///3h///x0///////tGEs/2twTUIAAAAAAAAAACAVASTjonP////////jwf///////+/R//////////3///////////////7//////7FfKv9xeFVCAAAAAAAAAAAdEgAk3Zts////////17X////////jxP/////////u///////////////u//////+uXSf/dn5dQgAAAAAAAAAAGg8AJMN4RP//7c//zoxe///nyf/Sk2f//9u8/96lfP/4yaf/7bqU/+65kv//0a3/rl0n/3+IZ0IAAAAAAAAAABcNACTip3v////////33f/////////q/////////////////////////////////6pZJP+Fjm5CAAAAAAAAAAAWCgAkuGs2///ev/+7eEj//9u8/8aGWP/3zaz/0pdt/+u7lv/hrIT/tn58/7OFn/+mViH/jJV2QgAAAAAAAAAAFAgAJNugdP////////DV////////+uP/////////+P///////////1pI//9ue///pFUl/5Wdf0IAAAAAAAAAABIGACS+d0X////2/8+Wbv////L/0p13///34v/is5L//+HI//bOsP9cLZj/WTzl/6VVIv+eqIpCAAAAAAAAAAAUBwAknEMK/5VACf+POwT/hzQA/4UyAP+EMQD/hDEA/4UyAP+HMwD/izYA/5M8BP+cSRH/pq+TQgAAAAAAAAAAFgoAJKdXIP/////////////////Wz8L/5d7R/9/Yy//o4dT/6+PV//fs3f/97NX/pFMd/7K9oEIAAAAAAAAAABoOACSrXyn////////////////////////////o/////v///+7////4/////////6dYI/+9yK1CAAAAAAAAAAAbDgAioEwX/6NeLP+XVib/iksd/39CFf93PA3/ej4Q/4JEFP+NTRv/mFUi/6FZJP+kUhz/yda7QgAAAAAAAAAAAA4ACYBZL4lyTCeRYkAfkWZHJ5FfQiSRYEMkkWRHKJFpTS+RbU4wkX9dPZGRbEqRq4poj8fbvR0AAAAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAA=="
+        rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+    <title>Tax calculator</title>
+</head>
+
+<body>
+    <div class="container-fuild m-4 p-4" style="background-color: rgba(207, 193, 221, 0.801);">
+        <h1 class="text-center">Dharwin's Tax Calculator</h1>
+        <div class="row">
+            <div class="col-lg-6 py-4">
+                <h3 class="page-header">Basic Tax Calculator</h3>
+                <form autocomplete="on">
+                    <div class="form-group">
+                        <label for="product">Product Name</label>
+                        <input type="text" class="form-control" id="product">
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="text" class="form-control" id="quantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="rate">Rate</label>
+                        <input type="text" class="form-control" id="rate">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="add">Add Product</button>
+                </form>
+            </div>
+            <div class="col-lg-6 py-4">
+                <h3 class="page-header">Card Items</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center">
+                        <thead class="table-danger">
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col">Rate</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Tax</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="mydata" class="table-warning">
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6">
+                                    <h4 class="page-header">Total Amount: 0.00</h4>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
