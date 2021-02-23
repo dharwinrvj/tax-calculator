@@ -1,6 +1,6 @@
 # tax-calculator
 # Tax Calculator using Bootstrap and JQuery
-## Live Demo: https://dharwinjruppa.github.io/tax-calculator
+## Live Demo: https://dharwinrvj.github.io/tax-calculator
 
 <img src="demoimages/0.png">
 <img src="demoimages/1.png">
