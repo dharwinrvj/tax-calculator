@@ -19,7 +19,7 @@ $(document).ready(function () {
         qnt +
         "</td><td>" +
         tax +
-        "</td><td class='amt'>" +
+        "</td><td class='amt'>" + 
         amt +
         "</td><td><button type='button' id='del' class='btn btn-danger'>Delete</button></td></tr>";
       console.log(
